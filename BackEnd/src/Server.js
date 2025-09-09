@@ -1,5 +1,7 @@
 import express from 'express';
 
+import notesRoutes from "./routes/notesRoutes.js";
+
 const app = express();
 const PORT = 5001;
 
@@ -7,18 +9,8 @@ const PORT = 5001;
 app.use(express.json())
 
 //Routes
-app.get("/note", (req, res) => {
-    res.status(200).json({ message: "Hello, Express.js!" });
-});
-app.post("/note", (req, res) => {
-    res.status(201).json({ message: "Data Received" })
-});
-app.put("/note/:id", (req, res) => {
-    res.status(200).json({ message: "Data Received" })
-});
-app.delete("/note/:id", (req, res) => {
-    res.status(200).json({ message: "Data Received" })
-});
+app.use("/api/notes", notesRoutes)
+
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
