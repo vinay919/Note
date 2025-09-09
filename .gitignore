@@ -1,16 +1,16 @@
 # Ignore node modules in both frontend and backend
-FrontEnd/node_modules/
+FrontEnd/note-app/node_modules/
 BackEnd/node_modules/
 
 # Environment files
 .env
-FrontEnd/.env
+FrontEnd/note-app/.env
 BackEnd/.env
 
 # Build outputs
 dist/
 build/
-FrontEnd/dist/
-FrontEnd/build/
+FrontEnd/note-app/dist/
+FrontEnd/note-app/build/
 BackEnd/dist/
 BackEnd/build/
